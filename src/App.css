@@ -18,3 +18,8 @@ body {
   padding: 50px 0;
   height: 100%;
 }
+
+p {
+  white-space: revert;
+  overflow-wrap: anywhere;
+}
