@@ -30,7 +30,7 @@ function HomePage() {
                                 getPosts.data?.data.map((item, index) => {
 
                                     return (
-                                        <article key={index} className="bg-slate-300  flex max-w-xl flex-col items-start justify-between p-5 rounded-md">
+                                        <article key={index} className=" overflow-hidden bg-slate-300  flex max-w-xl flex-col items-start justify-between p-5 rounded-md">
                                             <div className="flex items-center gap-x-4 text-xs">
                                                 <time className="text-gray-500">
                                                     {item.createdAt.slice(0, 10)}
@@ -44,10 +44,10 @@ function HomePage() {
                                                 <h3 className="mt-3 text-xl font-semibold leading-6 text-gray-900 font-bold group-hover:text-gray-900 text-left">
                                                     <Link to={item._id}>
                                                         <span className="absolute inset-0" />
-                                                        {item.title}
+                                                        {item.title.slice(0, 30)}
                                                     </Link>
                                                 </h3>
-                                                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 text-left">{item.content
+                                                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 text-left">{item.content.slice(0, 150)
                                                 } </p>
                                             </div>
 

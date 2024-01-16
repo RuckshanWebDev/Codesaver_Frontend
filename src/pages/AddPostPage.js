@@ -61,7 +61,7 @@ function AddPostPage() {
                         </div>
                     </div>
 
-                    <button type="submit" className='bg-slate-500 py-3 px-8 rounded-md text-xl font-medium' >{postData.isLoading ? 'Posting ...' : 'Post'}</button>
+                    <button disabled={postData.isLoading} type="submit" className='bg-slate-500 py-3 px-8 rounded-md text-xl font-medium' >{postData.isLoading ? 'Posting ...' : 'Post'}</button>
                 </form>
             </div>
         </div>
